@@ -1,47 +1,16 @@
-//variables
-
-$deepblue: #032f3e;
-$offwhite: #f8f9fb;
-$sectionheading: 24px;
-$bannerheading: 46px;
-
-//mixins
-
-@mixin banner {
-	width: 100%;
-	position: relative;
-	color: white;
-	.banner-content {
-		position: absolute;
-		top: 50px;
-		width: 100%;
-	}
-	.img {
-		width: 100%;
-	}
-	span {
-		font-size: $bannerheading;
-		display: block;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	span .title{
-		font-weight: normal;
-		margin-bottom: 30px;
-	}
-}
-
-
-//main css
+@import "reset";
+@import "variables";
+@import "mixins";
 
 #main-nav {
 	background: $deepblue;
 	ul {
 		width: 100%;
+		@include clearfix;
 	}
 	li {
 		float: left;
-		width: 15%;
+		width: (100% / 6);
 	}
 	a{
 		color: $offwhite;
@@ -49,15 +18,13 @@ $bannerheading: 46px;
 		padding: 16px;
 		display: block;
 		text-align: center;
+		&:hover {
+			background: #333;
+		}
 	}
 
 } // end main-nav
 
-#main-nav ul:after{
-	content: "";
-	display: block;
-	clear: both;
-}
 
 .section h1 {
 	font-size: $sectionheading;
@@ -76,5 +43,31 @@ $bannerheading: 46px;
 		font-size: 20px;
 		max-width: 500px;
 		margin: 60px, 0;
+	}
+}
+
+#services {
+	margin: 50px;
+	li {
+		float: left;
+		box-sizing: border-box;
+		text-align: center;
+		width: (100% / 3);
+	}
+	img  {
+		width: 60%;
+		margin: 20px 20%;
+	}
+	a {
+		text-decoration: none;
+		color: $deepblue;
+		font-weight: bold;
+		&:hover{
+			color: red;
+		}
+	}
+
+	ul {
+		@include clearfix;
 	}
 }
