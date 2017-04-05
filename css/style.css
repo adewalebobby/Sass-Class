@@ -33,6 +33,9 @@ li {
   #main-nav li {
     float: left;
     width: 16.66667%; }
+    @media screen and (max-width: 600px) {
+      #main-nav li {
+        width: 100%; } }
   #main-nav a {
     color: #f8f9fb;
     text-decoration: none;
@@ -40,7 +43,7 @@ li {
     display: block;
     text-align: center; }
     #main-nav a:hover {
-      background: #333; }
+      background: #044156; }
 
 .section h1 {
   font-size: 24px;
@@ -105,7 +108,7 @@ li {
     color: #032f3e;
     font-weight: bold; }
     #services a:hover {
-      color: red; }
+      color: #3e1203; }
   #services ul:after {
     content: "";
     display: block;
