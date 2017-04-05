@@ -25,7 +25,14 @@ $bannerheading: 46px;
 		text-transform: uppercase;
 		font-weight: bold;
 	}
+	span .title{
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
 }
+
+
+//main css
 
 #main-nav {
 	background: $deepblue;
@@ -55,4 +62,19 @@ $bannerheading: 46px;
 .section h1 {
 	font-size: $sectionheading;
 	color: $deepblue;
+}
+
+.lead-banner {
+	@include banner;
+	text-align: right;
+}
+
+.lessons-banner {
+	@include banner;
+	li {
+		text-transform: uppercase;
+		font-size: 20px;
+		max-width: 500px;
+		margin: 60px, 0;
+	}
 }
